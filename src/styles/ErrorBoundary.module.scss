@@ -1,0 +1,65 @@
+.errorContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+
+  .errorContent {
+    text-align: center;
+    max-width: 600px;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .errorTitle {
+      color: #dc3545;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .errorMessage {
+      color: #6c757d;
+      margin-bottom: 1rem;
+    }
+
+    .errorDigest {
+      color: #adb5bd;
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .resetButton {
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #0b5ed7;
+      }
+    }
+  }
+}
+
+.globalErrorContainer {
+  @extend .errorContainer;
+  background-color: #f1f3f5;
+
+  .globalErrorContent {
+    @extend .errorContent;
+    border: 1px solid #dee2e6;
+
+    .globalErrorTitle {
+      @extend .errorTitle;
+      color: #842029;
+    }
+  }
+}
